@@ -25,6 +25,11 @@ function solution(array,commands) {
 
 ## 다른 사람 풀이
 
+1. map을 사용해서 commands의 command배열을 구조분해할당함
+2. map 안에서 새로운 배열을 만들어서 filter를 사용해서 잘라내고 sort를 사용해서 정렬시킴
+3. map 안에서 positon-1 인덱스를 리턴시킴
+4. map으로 받을 배열을 마지막으로 솔루션 함수내에서 리턴을 한번 더 시켜줌
+
 ```Js
 function solution(array, commands) {
     return commands.map(command => {
@@ -38,7 +43,9 @@ function solution(array, commands) {
 }
 ```
 
-## 정리
+## 알게 된 점
+
+- 나의 풀이 과정에서 sort() , sort((a,b) => a-b)의 차이점
 
 ```Js
 const arr = [1,10,2,20,100]
@@ -48,3 +55,8 @@ console.log(arr.sort())
 console.log(arr.sort((a,b)=>a-b)) 
 // [ 1, 2, 10, 20, 100 ]
 ```
+
+1. 구조분해할당을 통해서 간결하게 쓸 수 있는 방법을 알게 되었다.
+2. filter함수의 활용법을 알게 되었다.
+
+
